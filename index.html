@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Страница товаров</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+ </head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			
+			<label class="address">
+				<input type="text" class="input input-address" placeholder="Адрес доставки"/>
+			</label>
+			<div class="buttons">
+				<span class="user-name"></span>
+				<button class="button button-primary button-auth">
+					<span class="button-auth-svg"></span>
+					<span class="button-text">Войти</span>
+				</button>
+				<button class="button button-cart" id="cart-button">
+					<span class="button-cart-svg"></span>
+					<span class="button-text">Корзина</span>
+				</button>
+				<button class="button button-primary button-out">
+					<span class="button-text">Выйти</span>
+					<span class="button-out-svg"></span>
+				</button>
+			</div>
+		</header>
+	</div>
+	<!-- /.container  -->
+
+	<main class="main">
+		<div class="container">
+			<section class="container-promo">
+			
+			</section>
+			
+			<section class="menu">
+				<div class="section-heading">
+					<h2 class="section-title">Товары</h2>
+					<label class="search">
+						<input type="text" class="input input-search" placeholder="Поиск товаров по названиям"/>
+					</label>
+				</div>
+				<div class="cards cards-menu">
+		
+				</div>
+				<!-- /.cards -->
+			</section>
+
+		</div>
+		<!-- /.container -->
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-block">
+				<h4>Тестовое задание в компанию Вебмастер. Выполнил: Ершов Илья</h4>
+			</div>
+			<!-- /.footer-block -->
+		</div>
+	</footer>
+
+	<div class="modal modal-cart">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h3 class="modal-title">Корзина</h3>
+				<button class="close">&times;</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				
+			</div>
+			<!-- /.modal-body -->
+			<div >
+				<form class="orderForm" action="mail.php" method="POST">
+					<div class="input-group hide">
+						<input type="text" class="total_price hide"  id="" name="total_price" readonly>
+						<input type="text" class="product_name hide"  id="" name="product_name" readonly>
+					</div>
+					<div class="input-group">
+						<label for="">Введите ваше имя</label>
+						<input type="text" class="input"  id="" name="user_name" placeholder="Например, Иван">
+					</div>
+				
+					<div class="input-group">
+						<label for="">Введите номер телефона</label>
+						<input type="text" class="input"  id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+					</div>
+				
+					<div class="input-group">
+						<label for="">Введите email</label>
+						<input type="email" class="input" id="" name="user_email" placeholder="mail@mail.ru">
+					</div>
+					<div class="modal-footer">
+						<span class="modal-pricetag">0 ₽</span>
+						<div class="footer-buttons">
+							<button type="submit" class="button">Оформить заказ</button>
+							<button class="button clear-cart">Отмена</button>
+						</div>
+					</div>
+					
+				</form>
+				
+			</div>
+			<!-- /.modal-footer -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<div class="modal-auth">
+		<div class="modal-dialog modal-dialog-auth">
+			<button class="close-auth">&times;</button>
+			<form id="logInForm">
+				<fieldset class="modal-body">
+					<legend class="modal-title">Авторизация</legend>
+					<label class="label-auth">
+						<span>Логин</span>
+						<input id="login" type="text">
+					</label>
+					<label class="label-auth">
+						<span>Пароль</span>
+						<input id="password" type="password">
+					</label>
+				</fieldset>
+				<!-- /.modal-body -->
+				<div class="modal-footer">
+					<div class="footer-buttons">
+						<button class="button button-primary button-login" type="submit">Войти</button>
+					</div>
+				</div>
+			</form>
+			<!-- /.modal-footer -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
